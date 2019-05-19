@@ -1,6 +1,5 @@
 ### Wishlist ###
 * Create a basic wishlist app.
-* The final project **must** be pushed on a branch of master - NOT ON MASTER BRANCH
  
 ## The Core Tech Stack
 
@@ -8,7 +7,6 @@
 * [Angular (>5)](https://angular.io/docs)
 * HTML5
 * Node
-* Plus any thing else you deem appropriate
 
 ### The Task ###
 
@@ -27,9 +25,7 @@
    * Steak
 
 * The data for the wishlist **must** be fetched using a service that implements Angular HTTP Client
-    * https://angular.io/guide/http
 * The items in the wishlist **must** be rendered using the **Angular component factory**
-    * https://angular.io/guide/dynamic-component-loader
 * Enable the user to add a combination of these items to their wishlist without creating a user account. 
 * Enable the user to manage the items on their wishlist (remove, clear wishlist etc.).
 
