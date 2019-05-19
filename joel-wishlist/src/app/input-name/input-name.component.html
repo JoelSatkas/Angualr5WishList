@@ -1,0 +1,13 @@
+<div>
+  <div>
+    <span>Create new {{itemType.type}}</span>
+    <span *ngIf="itemType.category"> for {{itemType.category}}</span>
+  </div>
+
+  <label>name:
+    <input [(ngModel)]="name" placeholder="name"/>
+  </label>
+  <button (click)="add(name, itemType.type, itemType.category); name =''">
+    add
+  </button>
+</div>

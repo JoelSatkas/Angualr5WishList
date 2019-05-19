@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="categories">
+    <div *ngFor="let category of categories">
+      <span>{{category.name}}</span>
+      <button (click)="addItem(category.name)">Add Item</button>
+      <div cdkDropList
+           id = 'itemDropList{{category.name}}'
+           [cdkDropListData]="category.items"
+           [cdkDropListConnectedTo]="wishDropList"
+           class="list"
+           (cdkDropListDropped)="drop($event)">
+        <div class="category.items box" *ngFor="let item of category.items" cdkDrag>
+            <app-item [item]="{name: item.name, itemListType: 'category', category: category.name}"></app-item>
+        </div>
+      </div>
+    </div>
+    <button (click)="addCategory()">Add Category</button>
+  </div>
+  <div *ngIf="showInputForCat">
+    <app-input-name [itemType]="{type: 'category'}"></app-input-name>
+  </div>
+  <div *ngIf="showInputForItem">
+    <app-input-name [itemType]="{type: 'item', category: selectedCategory}"></app-input-name>
+  </div>
+</div>

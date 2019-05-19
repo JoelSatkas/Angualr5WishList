@@ -1,0 +1,8 @@
+.item-container{
+  position: relative;
+}
+
+.item-container-child {
+  position: absolute;
+  left: 350px;
+}

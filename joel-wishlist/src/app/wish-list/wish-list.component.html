@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>Wish List</h2>
+  <div
+    cdkDropList
+    id = 'wishDropList'
+    [cdkDropListData]="wishList.items"
+    [cdkDropListConnectedTo]="itemDropList"
+    class="list"
+    (cdkDropListDropped)="drop($event)">
+    <div class="box" *ngFor="let item of wishList.items" cdkDrag>
+      <app-item [item]="{name: item.name, itemListType: 'wishList'}"></app-item>
+    </div>
+  </div>
+  <button (click)="clearWishList()">Clear List</button>
+</div>
